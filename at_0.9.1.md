@@ -1,6 +1,7 @@
 **This still needs some work**
+
 | Command  | Description | Set / Execute | Query | Test | Parameters |
-| -------- | ----------- | ------------- | ----- | ---- | -------- |
+| -------- | ----------- | ------------- | ----- | ---- | ---------- |
 | AT | General test | | | | |
 | ATE | same as AT  | | | |
 | AT+RST | Soft reset | | | |
