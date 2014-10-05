@@ -2,7 +2,7 @@ Welcome to the esp8266 wiki!
 
 ## Current status
 * A working gcc compiler see [[Compiler]]
-* A closed/NDA SDK
+* A closed/NDA SDK (work is being done getting this into the open)
 
 
 ## What is this ESP8266
