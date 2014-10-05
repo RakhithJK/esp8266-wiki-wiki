@@ -6,7 +6,7 @@ Welcome to the esp8266 wiki!
 
 
 ## What is this ESP8266
-* Its a wireless SoC
+* Its a wireless [https://en.wikipedia.org/wiki/System_on_a_chip](SoC)
 * It has GPIO, I2C, ADC, SPI, PWM and some more
 * Its 80Mhz fast
 * Its based on the RISC architecture
