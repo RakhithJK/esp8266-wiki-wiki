@@ -12,3 +12,21 @@ Welcome to the esp8266 wiki!
 * Its based on the RISC architecture
 * The core is made by [Tensilica](http://ip.cadence.com/)
 * The chip is made by [Espressif](espressif.com/en/products/esp8266/)
+
+## Features
+* ￼802.11 b/g/n protocol
+* Wi-Fi 2.4 GHz, support WPA/WPA2
+* Super small module size (11.5mm x 11.5mm)
+* Integrated 10-bit ADC
+* Integrated TCP/IP protocol stack
+* Integrated TR switch, balun, LNA, power amplifier and matching network Integrated PLL, regulators, and power management units
+* +20dBm output power in 802.11b mode
+* Supports antenna diversity
+* Deep sleep power <10uA, Power down leakage current < 5uA
+* Integrated low power 32-bit MCU
+* SDIO 2.0, SPI, UART
+* STBC, 1x1 MIMO, 2x1 MIMO
+* A-MPDU & A-MSDU aggregation & 0.4μs guard interval
+* Wake up and transmit packets in < 2ms
+* Standby power consumption of < 1.0mW (DTIM3)
+* Operating temperature range -40C ~ 125C
