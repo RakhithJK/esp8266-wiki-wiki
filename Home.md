@@ -18,7 +18,7 @@ Welcome to the esp8266 wiki!
 * Wi-Fi 2.4 GHz, support WPA/WPA2
 * Super small module size (11.5mm x 11.5mm)
 * Integrated 10-bit ADC
-* Integrated TCP/IP protocol stack
+* Integrated TCP/IP protocol stack (ipv4 only at the moment)
 * Integrated TR switch, balun, LNA, power amplifier and matching network Integrated PLL, regulators, and power management units
 * +20dBm output power in 802.11b mode
 * Supports antenna diversity
