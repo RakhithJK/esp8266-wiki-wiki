@@ -6,9 +6,9 @@ Welcome to the esp8266 wiki!
 
 
 ## What is this ESP8266
-* Its a wireless [https://en.wikipedia.org/wiki/System_on_a_chip](SoC)
+* Its a wireless [SoC](https://en.wikipedia.org/wiki/System_on_a_chip)
 * It has GPIO, I2C, ADC, SPI, PWM and some more
 * Its 80Mhz fast
 * Its based on the RISC architecture
-* The core is made by Tensilica
-* The chip is made by Espressif
+* The core is made by [Tensilica](http://ip.cadence.com/)
+* The chip is made by [Espressif](espressif.com/en/products/esp8266/)
