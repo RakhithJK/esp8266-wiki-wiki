@@ -1,5 +1,7 @@
 * [[Home]]
-* [[Hardware versions|Hardware_versions]]
+* Hardware
+ * [[Versions|Hardware_versions]]
+ * [[Pin definition|Pin-definition]]
 * [[Compiler]]
  * [Building](https://github.com/esp8266/esp8266-wiki/blob/master/Building_the_toolchain.md)
  * [[Uploading]]
