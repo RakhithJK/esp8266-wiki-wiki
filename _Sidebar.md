@@ -3,10 +3,9 @@
  * [[Versions|Hardware_versions]]
  * [[Pin definition|Pin-definition]]
 * [[Compiler]]
- * [Building](https://github.com/esp8266/esp8266-wiki/blob/master/Building_the_toolchain.md)
- * [[Toolchain]] (gcc)
- * [[Building]]
- * [[Uploading]]
+ 1. [[Toolchain]]
+ 1. [[Building]]
+ 1. [[Uploading]]
 * Software
  * [[GPIO Registers|gpio-registers]]
 * Examples
