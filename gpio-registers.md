@@ -22,18 +22,18 @@ PROVIDE(PIN_2 = 0x60000330);
 In your C code or an include file you can then define these as external variables to access them:
 
 ```
-extern uint32_t PIN_OUT;
-extern uint32_t PIN_OUT_SET;
-extern uint32_t PIN_OUT_CLEAR;
+extern volatile uint32_t PIN_OUT;
+extern volatile uint32_t PIN_OUT_SET;
+extern volatile uint32_t PIN_OUT_CLEAR;
 
-extern uint32_t PIN_DIR;
-extern uint32_t PIN_DIR_OUTPUT;
-extern uint32_t PIN_DIR_INPUT;
+extern volatile uint32_t PIN_DIR;
+extern volatile uint32_t PIN_DIR_OUTPUT;
+extern volatile uint32_t PIN_DIR_INPUT;
 
-extern uint32_t PIN_IN;
+extern volatile uint32_t PIN_IN;
 
-extern uint32_t PIN_0;
-extern uint32_t PIN_2;
+extern volatile uint32_t PIN_0;
+extern volatile uint32_t PIN_2;
 ```
 
 PIN_OUT is a register that holds the output of all the pins at once. Bit 0 = GPIO0, bit 2 = GPIO2. Whatever is written there will affect all the pins at once. For example, writing 0x01 will set GPIO0 high and GPIO2 low. Writing 0x04 will set GPIO2 high and GPIO0 low. 0x05 will set both high, 0x00 will set both low. That means that if you use multiple pins as output, you have to prepare what you write to this register, so as not to accidentally change any other pins that you don't want to change.
