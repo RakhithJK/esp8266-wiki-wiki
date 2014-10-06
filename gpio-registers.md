@@ -1,3 +1,5 @@
+> Information tnx to mamalala
+
 There are several registers that allow setting/clearing a pin that is as output, making a pin an input or output, and reading an input pin. First i added these PROVIDE's to the main linker script, eagle.app.v6.ld, to make those registers available:
 
 ```
@@ -49,5 +51,3 @@ Now, above i also gave addresses for PIN_0 and PIN_2. As of yet i have no idea w
 Anyways, the _OUT_SET and _OUT_CLEAR registers are quite useful, so are the _DIR_OUTPUT and _DIR_INPUT registers if one wants to quickly set/clear pins or change their direction, without going through the provided API, which always takes 4 parameters that are handed over to a function in ROM and then subsequently used there. Directly accessing them will reduce that overhead.
 
 Oh, and of course the PIN_OUT and PIN_DIR registers can also be read back (but not the set/clear and input/output registers, they will always return 0 on read)
-
-> Information tnx to mamalala
