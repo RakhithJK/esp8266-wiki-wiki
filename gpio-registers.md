@@ -1,6 +1,8 @@
 > Information tnx to mamalala
 
-There are several registers that allow setting/clearing a pin that is as output, making a pin an input or output, and reading an input pin. First i added these PROVIDE's to the main linker script, eagle.app.v6.ld, to make those registers available:
+There are several registers that allow setting/clearing a pin that is as output, making a pin an input or output, and reading an input pin. 
+
+First i added these PROVIDE's to the main linker script, ```/Espressif/esp_iot_sdk_v0.9.1/ld/eagle.app.v6.ld```, to make those registers available:
 
 ```
 PROVIDE(PIN_OUT = 0x60000300);
