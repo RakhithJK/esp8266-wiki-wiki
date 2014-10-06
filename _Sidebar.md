@@ -8,8 +8,6 @@
  1. [[Uploading]]
 * Software
  * [[GPIO Registers|gpio-registers]]
-* Examples
- * [[Blinky]]
-* [[Uploading]]
+ * [[Examples]]
 * AT Command set
  * [[0.9.1|at_0.9.1]]
