@@ -23,6 +23,10 @@ download esp8266_sdk_v0.9.1.zip:  http://rghost.net/download/58019758/eff3feb46a
 
 extract esp8266_sdk_v0.9.1.zip to /opt/Espressif/ESP8266_SDK
 
+#Adding libs to the SDK
+wget -O /opt/Espressif/ESP8266_SDK/lib/libc.a https://github.com/esp8266/esp8266-wiki/raw/master/libs/libc.a
+wget -O /opt/Espressif/ESP8266_SDK/lib/libhal.a https://github.com/esp8266/esp8266-wiki/raw/master/libs/libhal.a
+
 #Installing ESP tool
 Download the deb for esptool from the git repo or download the [source](https://github.com/esp8266/esp8266-wiki/raw/master/deb/src/esptool_0.0.2.orig.tar.gz) and build yourself.
 ```
