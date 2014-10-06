@@ -29,5 +29,5 @@ Download the deb for esptool from the git repo
 dpkg -i esptool_0.0.2-1_i386.deb
 ```
 
-**Done**
+Next step: [[Building]]
 
