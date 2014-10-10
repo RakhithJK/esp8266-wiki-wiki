@@ -9,7 +9,7 @@ chown $username /opt/Espressif
 ```
 ### 64-bit systems
 ```
-apt-get install git autoconf build-essential gperf bison flex texinfo libtool libncurses5-dev wget gawklibc6-dev-i386
+apt-get install git autoconf build-essential gperf bison flex texinfo libtool libncurses5-dev wget gawk libc6-dev-i386
 mkdir /opt/Espressif
 chown $username /opt/Espressif 
 ```
