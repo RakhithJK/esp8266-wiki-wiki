@@ -15,7 +15,7 @@ This will upload the first part of the software to the esp
 esptool.py --port /dev/ttyUSB0 write_flash 0x00000 0x00000.bin
 ```
 
-This will upload the second part
+This will upload the second part (sometimes a reset is needed)
 ```
 esptool.py --port /dev/ttyUSB0 write_flash 0x40000 0x40000.bin
 ```
