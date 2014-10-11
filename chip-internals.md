@@ -1,3 +1,6 @@
+## Bootloader
+Baudrate: 76800
+
 ## flashing segments
 * in 0x00000 are the segments .text, .data and .rodata from the elf file
 * in 0x40000 is the segment .irom0.text
