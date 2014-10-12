@@ -37,14 +37,10 @@ wget -O /opt/Espressif/ESP8266_SDK/lib/libhal.a https://github.com/esp8266/esp82
 ```
 
 ## Added header files
-find ```ESP-IOT-SDK-NOVM.rar```
-
-Extract the contends of the rar file, after that extract the contends of the .exe file.
-
-This will give you a directory ```usr```
-Copy over the libs
 ```
-cp -R usr/xtensa/XtDevTools/install/builds/RC-2010.1-win32/lx106/xtensa-elf/include /opt/Espressif/ESP8266_SDK/
+wget -O /opt/Espressif/include.tgz https://github.com/esp8266/esp8266-wiki/raw/master/include.tgz
+cd /opt/Espressif/
+tar -xvzf include.tgz
 ```
 
 
