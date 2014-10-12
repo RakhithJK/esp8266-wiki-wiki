@@ -9,6 +9,14 @@ To upload to the module configure the following pins
 | GPIO2 | High |
 Pinout is in [[Hardware versions|Hardware_versions]]
 ## Uploading
+### Windows (tnx to zoutepopcorn)
+Use python 2.7.8 NOT python 3! https://www.python.org/downloads/
+
+Install lib: pyserial-2.7 http://pyserial.sourceforge.net/pyserial.html
+
+use command ..... --port COM3 ......
+under windows.
+
 ### [esptool.py](https://github.com/themadinventor/esptool/blob/master/esptool.py)
 This will upload the first part of the software to the esp
 ```
