@@ -7,4 +7,6 @@ Baudrate: 76800
 * the one at 0x00000 is a multipart-file wit headers, checksums, etc., whereas the one at 0x40000 is a raw file
 
 ## Hi res image of the top layer
-![Tnx to http://zeptobars.ru/en/read/Espressif-ESP8266-wifi-serial-rs232-ESP8089-IoT](http://s.zeptobars.ru/ESP8266-HD.jpg)[Tnx to](http://zeptobars.ru/en/read/Espressif-ESP8266-wifi-serial-rs232-ESP8089-IoT)
+![](http://s.zeptobars.ru/ESP8266.jpg)
+[Full size](http://s.zeptobars.ru/ESP8266-HD.jpg)
+[Tnx to](http://zeptobars.ru/en/read/Espressif-ESP8266-wifi-serial-rs232-ESP8089-IoT)
