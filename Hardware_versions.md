@@ -8,3 +8,10 @@ ESP-?
 For starting the chip bind pin CH_PD to VCC (3.3v)
 ### Alternative names
 ESP-?
+
+## ESP-03
+![](https://github.com/esp8266/esp8266-wiki/blob/master/images/esp-03.jpg)
+
+
+## ESP8266MOD
+![](https://github.com/esp8266/esp8266-wiki/blob/master/images/esp-mod.jpg)
