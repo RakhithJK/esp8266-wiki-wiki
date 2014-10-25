@@ -26,9 +26,9 @@ cd crosstool-NG
 ```
 
 #Setting up the SDK
-download esp8266_sdk_v0.9.1.zip:  http://rghost.net/download/58019758/eff3feb46a2047a0de0d56479d21fab434429fea/esp8266_sdk_v0.9.1.zip
+download esp_iot_sdk_v0.9.2_14_10_24.zip: http://bbs.espressif.com/viewtopic.php?f=5&t=3
 
-extract esp8266_sdk_v0.9.1.zip to /opt/Espressif/ESP8266_SDK
+extract the contends of esp_iot_sdk_v0.9.2_14_10_24.zip to /opt/Espressif/ESP8266_SDK/
 
 #Adding libs to the SDK
 ```
