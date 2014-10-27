@@ -12,7 +12,7 @@ Welcome to the esp8266 wiki!
 * It has a Winbond [[W25Q40BVNIG]] SPI flash
 * Its based on the RISC architecture
 * The core is made by [Tensilica](http://ip.cadence.com/)
-* The [[chip|ESP8266_versions]] is made by [Espressif](espressif.com/en/products/esp8266/)
+* The [[chip|Hardware_ESP8266 Versions]] is made by [Espressif](espressif.com/en/products/esp8266/)
 * [[Modules|Hardware_versions]] bearing this chip are made by various manufacturers.
 
 ## Features
