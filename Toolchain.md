@@ -17,7 +17,7 @@ chown $username /opt/Espressif
 
 ##as local user:
 ```
-/opt/Espressif
+cd /opt/Espressif
 git clone -b lx106 git://github.com/jcmvbkbc/crosstool-NG.git 
 cd crosstool-NG
 ./bootstrap && ./configure --prefix=`pwd` && make && make install
