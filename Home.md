@@ -8,12 +8,12 @@ Welcome to the esp8266 wiki!
 ## What is this ESP8266
 * Its a wireless [SoC](https://en.wikipedia.org/wiki/System_on_a_chip)
 * It has GPIO, I2C, ADC, SPI, PWM and some more
-* Its 80Mhz fast
+* Its 80MHz fast
 * It has a Winbond [[W25Q40BVNIG]] SPI flash
 * Its based on the RISC architecture
-* The core is made by [Tensilica](http://ip.cadence.com/)
-* The [[chip|Hardware_ESP8266 Versions]] is made by [Espressif](espressif.com/en/products/esp8266/)
-* [[Modules|Hardware_versions]] bearing this chip are made by various manufacturers.
+* The core is a 106micro Diamond Standard core (LX3) made by [Tensilica](http://ip.cadence.com/)
+* The [[ESP8266 chip|Hardware_ESP8266 Versions]] is made by [Espressif](http://espressif.com/en/products/esp8266/)
+* [[Modules|Hardware_versions]] bearing this chip are made by various manufacturers
 
 ## Features
 * ￼802.11 b/g/n protocol
