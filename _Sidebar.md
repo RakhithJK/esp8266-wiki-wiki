@@ -1,8 +1,8 @@
 * [[Home]]
 * Hardware
- * [[Chip Variants|Hardware_ESP8266 Versions]]
- * [[Module Variants|Hardware_versions]]
- * [[Pin definition|Pin-definition]]
+ * [[Module Versions|Hardware_versions]]
+ * [[Chip Versions|Hardware_ESP8266 Versions]]
+ * [[Chip Pin Definitions|Pin-definition]]
 * [[Compiler]]
  1. [[Toolchain]]
  1. [[Building]]
