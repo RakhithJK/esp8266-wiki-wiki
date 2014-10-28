@@ -1,3 +1,7 @@
+ESP8266EX chip pinout is something like this:
+
+![ESP8266EX Pin Layout Diagram](https://github.com/esp8266/esp8266-wiki/blob/master/images/esp8266ex-layout.jpg)
+
 Pin | Name | Type | Function
 :--:|------|:----:|----------
 1 | VDDA | P | Analog Power 3.0 ~3.6V
