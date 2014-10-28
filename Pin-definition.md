@@ -1,5 +1,5 @@
 Pin | Name | Type | Function
-----|------|------|----------
+:--:|------|:----:|----------
 1 | VDDA | P | Analog Power 3.0 ~3.6V
 2 | LNA | I/O | RF Antenna Interface,Chip Output Impedance=50 Ω No matching required but we recommend that the π- type matching network is retained.
 3 | VDD3P3 | P | Amplifier Power 3.0~3.6V
