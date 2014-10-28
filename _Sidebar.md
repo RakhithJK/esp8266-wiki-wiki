@@ -1,6 +1,7 @@
 * [[Home]]
 * Hardware
- * [[Versions|Hardware_versions]]
+ * [[Chip Variants|Hardware_ESP8266 Versions]]
+ * [[Module Variants|Hardware_versions]]
  * [[Pin definition|Pin-definition]]
 * [[Compiler]]
  1. [[Toolchain]]
