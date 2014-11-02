@@ -11,6 +11,8 @@ ESP-?
 
 ## ESP-03
 ![](https://github.com/esp8266/esp8266-wiki/blob/master/images/esp-03.jpg)
+### Info
+Starting the module bind CH_PD to VCC (3.3v) and GPIO15 to GND
 
 
 ## ESP8266MOD
