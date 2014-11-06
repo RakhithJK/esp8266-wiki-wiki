@@ -26,7 +26,7 @@ Welcome to the esp8266 wiki!
 * Supports antenna diversity
 * Deep sleep power <10uA, Power down leakage current < 5uA
 * Integrated low power 32-bit MCU
-* SDIO 2.0, SPI, UART
+* SDIO 2.0, SPI, UART, [I2C](Drivers)
 * STBC, 1x1 MIMO, 2x1 MIMO
 * A-MPDU & A-MSDU aggregation & 0.4μs guard interval
 * Wake up and transmit packets in < 2ms
