@@ -10,12 +10,17 @@ For enabling the chip in the second version, bind pin `CH_PD` to `VCC` (3.3v).
 | --- | -------- | ----------- |
 | 1   | GND      | Ground
 | 2   | U0TXD    | UART0 Transmit
-| 3   | GPIO2    |
+| 3   | GPIO2    | Has internal pull-up
 | 4   | CHIP_EN  | Chip Enable, active high
-| 5   | GPIO0    |
-| 6   | EXT_RSTB | External reset signal, active low
-| 7   | U0RXD    | UART0 Receive
+| 5   | GPIO0    | Has internal pull-up
+| 6   | EXT_RSTB | External reset signal, active low, has no pull-up? Spurious resets when attaching a DMM between GND and RST to check voltage.
+| 7   | U0RXD    | UART0 Receive, has internal pull-up
 | 8   | VDD      | +3.3V power input
+
+### LEDs
+| Color | Description
+| Red   | Tied to VCC, so always on when power is applied
+| Blue  | UART RX/TX indicator ?
 
 ## ESP-03
 ![](https://github.com/esp8266/esp8266-wiki/blob/master/images/esp-03.jpg)
