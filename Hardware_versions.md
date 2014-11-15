@@ -13,7 +13,7 @@ For enabling the chip in the second version, bind pin `CH_PD` to `VCC` (3.3v).
 | 3   | GPIO2    | Has internal pull-up
 | 4   | CHIP_EN  | Chip Enable, active high
 | 5   | GPIO0    | Has internal pull-up
-| 6   | EXT_RSTB | External reset signal, active low, has no pull-up? Spurious resets when attaching a DMM between GND and RST to check voltage.
+| 6   | EXT_RSTB | External reset signal, active low, has no pull-up? Spurious blue LED activity when attaching a DMM between GND and RST to check voltage.
 | 7   | U0RXD    | UART0 Receive, has internal pull-up
 | 8   | VDD      | +3.3V power input
 
