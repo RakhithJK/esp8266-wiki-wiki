@@ -1,12 +1,11 @@
-Uploading code to the module
-
 To upload to the module, configure the following pins:
 
-| Pin | Level | 
-| --- | ----- | 
-| CH_PD | High |
-| GPIO0 | Low |
-| GPIO2 | High |
+|  Pin   | Level | Description 
+| ------ | ----- | -----------
+| CH_PD  | High  | Enables the chip
+| GPIO0  | Low   | Selects UART download [[boot mode|Boot-Process#esp-boot-modes]]
+| GPIO2  | High  | Selects UART download [[boot mode|Boot-Process#esp-boot-modes]]
+| GPIO15 | Low   | If availble. Selects UART download [[boot mode|Boot-Process#esp-boot-modes]]
 
 Pinout is in [[Hardware versions|Hardware_versions]]
 
