@@ -10,7 +10,7 @@ ESP Boot Modes
 The Espressif code can boot in different modes, selected on power-up based on GPIO pin levels.
 
 | MTDO | GPIO0 | GPIO2 | Mode  | Description
-| ---- | ----- | ----- | ----- | -----------
+|:----:|:-----:|:-----:| ----- | -----------
 |   L  |   L   |   H   | UART  | Download code from UART
 |   L  |   H   |   H   | Flash | Boot from SPI Flash
 |   H  |   x   |   x   | SDIO  | Boot from SD-card
