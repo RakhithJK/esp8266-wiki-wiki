@@ -56,10 +56,22 @@ These are binary libraries from the Xtensa SDK. You can also build them from sou
 - [lx106-hal](https://github.com/tommie/lx106-hal) and
 - [newlib-xtensa](https://github.com/jcmvbkbc/newlib-xtensa)
 
-#Installing the ESP tool
+#Installing the ESP image tool
 Download the deb for esptool from the Git repo or get the [source](https://github.com/esp8266/esp8266-wiki/raw/master/deb/src/esptool_0.0.2.orig.tar.gz) and build yourself. Also available as a [Git repository](https://github.com/tommie/esptool-ck) for online browsing.
 ```
 dpkg -i esptool_0.0.2-1_i386.deb
 ```
+
+#Installing the ESP upload tool
+```
+cd /opt/Espressif/
+git clone https://github.com/themadinventor/esptool esptool-py
+```
+
+##Installing on Windows
+*By zoutepopcorn.*
+
+- Use Python 2.7, **not** Python 3: https://www.python.org/downloads/
+- Install lib pyserial-2.7: http://pyserial.sourceforge.net/pyserial.html
 
 Next step: [[Building]]
