@@ -21,7 +21,7 @@ For enabling the chip in the second version, bind pin `CH_PD` to `VCC` (3.3v).
 | Color | Description
 | ----- | -----------
 | Red   | Tied to VCC, so always on when power is applied
-| Blue  | UART TX indicator
+| Blue  | UART TX indicator, tied in hardware to U0TXD
 
 ## ESP-03
 ![](https://github.com/esp8266/esp8266-wiki/blob/master/images/esp-03.jpg)
@@ -30,3 +30,6 @@ Starting the module bind CH_PD to VCC (3.3v) and GPIO15 to GND
 
 ## ESP8266MOD
 ![](https://github.com/esp8266/esp8266-wiki/blob/master/images/esp-mod.jpg)
+
+## References
+- [Forum post Status LEDs, p2183](http://www.esp8266.com/viewtopic.php?f=13&t=473#p2183)
