@@ -1,7 +1,8 @@
 Welcome to the esp8266 wiki!
 
 ## Current status
-* A working GCC [[Toolchain]]
+* A working GCC-based [[Toolchain]]
+* Open-source tools for working with the firmware images and serial protocol
 * A closed/NDA SDK (work is being done getting this into the open)
 
 
