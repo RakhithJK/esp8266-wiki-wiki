@@ -7,7 +7,7 @@ For enabling the chip in the second version, bind pin `CH_PD` to `VCC` (3.3v).
 
 ### Pins to chip names
 | Pin |   Name   | Description |
-| --- | -------- | ----------- |
+| ---:| -------- | ----------- |
 | 1   | GND      | Ground
 | 2   | U0TXD    | UART0 Transmit
 | 3   | GPIO2    | Has internal pull-up
@@ -18,10 +18,10 @@ For enabling the chip in the second version, bind pin `CH_PD` to `VCC` (3.3v).
 | 8   | VDD      | +3.3V power input
 
 ### LEDs
-| Color | Description
-| ----- | -----------
-| Red   | Tied to VCC, so always on when power is applied
-| Blue  | UART TX indicator, tied in hardware to U0TXD
+| Color | Name | Description
+| ----- | ---- | -----------
+| Red   | PWR  | Tied to VCC, so always on when power is applied
+| Blue  | TXD  | UART TX indicator, tied in hardware to U0TXD
 
 ## ESP-03
 ![](https://github.com/esp8266/esp8266-wiki/blob/master/images/esp-03.jpg)
