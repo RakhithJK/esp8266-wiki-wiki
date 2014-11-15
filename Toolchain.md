@@ -1,19 +1,25 @@
 #Building the toolchain
 ## Install needed dependencies (as root)
-### 32-Bit systems
+### 32-Bit Debian (Linux)
 ```
-apt-get install git autoconf build-essential gperf bison flex texinfo libtool libncurses5-dev wget gawk libc6-dev-amd64
+apt-get install git autoconf build-essential gperf bison flex texinfo libtool libncurses5-dev wget gawk libc6-dev-amd64 python-serial
 mkdir /opt/Espressif
 chown $username /opt/Espressif 
 ```
 
-### 64-bit systems
+### 64-bit Debian (Linux)
 ```
-apt-get install git autoconf build-essential gperf bison flex texinfo libtool libncurses5-dev wget gawk libc6-dev-i386
+apt-get install git autoconf build-essential gperf bison flex texinfo libtool libncurses5-dev wget gawk libc6-dev-i386 python-serial
 mkdir /opt/Espressif
 chown $username /opt/Espressif 
 ```
 (replace $username with the name of the local user)
+
+### Windows
+*By zoutepopcorn.*
+
+- Use Python 2.7, **not** Python 3: https://www.python.org/downloads/
+- Install pyserial-2.7: http://pyserial.sourceforge.net/pyserial.html
 
 ##Install the Xtensa crosstool-NG (as local user)
 ```
@@ -67,11 +73,5 @@ dpkg -i esptool_0.0.2-1_i386.deb
 cd /opt/Espressif/
 git clone https://github.com/themadinventor/esptool esptool-py
 ```
-
-##Installing on Windows
-*By zoutepopcorn.*
-
-- Use Python 2.7, **not** Python 3: https://www.python.org/downloads/
-- Install lib pyserial-2.7: http://pyserial.sourceforge.net/pyserial.html
 
 Next step: [[Building]]
