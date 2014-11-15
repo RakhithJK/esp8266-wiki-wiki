@@ -19,6 +19,7 @@ For enabling the chip in the second version, bind pin `CH_PD` to `VCC` (3.3v).
 
 ### LEDs
 | Color | Description
+| ----- | -----------
 | Red   | Tied to VCC, so always on when power is applied
 | Blue  | UART RX/TX indicator ?
 
