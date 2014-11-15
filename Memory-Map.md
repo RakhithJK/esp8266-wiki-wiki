@@ -15,14 +15,23 @@ Memory Layout
 | 40000000h | brom?  | 64k        | ROM  | RW? | Internal ROM. May be writable somehow, but details unknown. |
 | 40100000h | iram1  | 32k        | RAM  | RW  | Instruction RAM. Shadowed version of 40200000h. |
 | 40200000h | irom0  | <100000h   | ROM  | RW  | SPI Flash ROM? |
-| 40211000h | irom0  | <100000h   | ROM  | RW  | User Application, slot 1. |
-| 40240000h | irom0  | <100000h   | ROM  | RW  | User Application start. Mapped to SPI ROM 40000h. |
-| 40251000h | irom0  | <100000h   | ROM  | RW  | User Application, slot 2. |
+| 40211000h | irom0  | <100000h   | ROM  | RW  | User application, slot 1. |
+| 40240000h | irom0  | <100000h   | ROM  | RW  | User application start.   |
+| 40251000h | irom0  | <100000h   | ROM  | RW  | User application, slot 2. |
 | 50000000h | srom   | <1000000h  | ROM  | R?  | *Unconfirmed.* Known from the XT2000 memory map. |
 | 60000000h | sram   | <4000000h  | RAM  | RW  | *Unconfirmed.* Known from the XT2000 memory map. |
 | 70000000h | iocch  | <E000000h  | I/O  | RW? | Cached I/O. *Unconfirmed.* Known from the XT2000 memory map. |
 | 80000000h | rambp  | <10000000h | RAM  | RW  | Uncached RAM. *Unconfirmed.* Known from the XT2000 memory map. |
 | 90000000h | iobp   | <E000000h  | I/O  | RW? | Uncached I/O. *Unconfirmed.* Known from the XT2000 memory map. |
+
+SPI Flash ROM Layout
+--------------------
+| Address |      Name       |    Description     |
+| ------- | --------------- | ------------------ |
+|  00000h | flash.bin       | Bootloader         |
+|  40000h | irom0text.bin   | User application   |
+|  7C000h | ?               | Some configuration |
+|  7E000h | blank.bin       | Filled with FFh.   |
 
 Exception Vectors
 -----------------
@@ -40,5 +49,6 @@ Unconfirmed. From the XT2000 memory map.
 References
 ----------
 - [Forum post Memory Layout, p274](http://www.esp8266.com/viewtopic.php?f=5&t=9&start=30#p274)
+- [Forum post Firmware Dump, p263](http://www.esp8266.com/viewtopic.php?f=6&t=39&start=10#p263)
 - lx106-rc-2010.1/xtensa-elf/lib/xt2000-rt/memmap.xmm
 - [ESP SDK linker scripts](https://github.com/metalheart/esp8266/tree/master/ld)
