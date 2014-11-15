@@ -22,6 +22,8 @@ chown $username /opt/Espressif
 - Install pyserial-2.7: http://pyserial.sourceforge.net/pyserial.html
 
 ##Install the Xtensa crosstool-NG (as local user)
+*A big thanks to [jcmvbkbc](https://github.com/jcmvbkbc) for making GCC and crosstool-NG work with the Xtensa call0 ABI!*
+
 ```
 cd /opt/Espressif
 git clone -b lx106 git://github.com/jcmvbkbc/crosstool-NG.git 
