@@ -37,6 +37,9 @@ extract the contends of esp_iot_sdk_v0.9.2_14_10_24.zip to /opt/Espressif/ESP826
 wget -O /opt/Espressif/ESP8266_SDK/lib/libc.a https://github.com/esp8266/esp8266-wiki/raw/master/libs/libc.a
 wget -O /opt/Espressif/ESP8266_SDK/lib/libhal.a https://github.com/esp8266/esp8266-wiki/raw/master/libs/libhal.a
 ```
+These are binary libraries from the Xtensa SDK. You can also build them from source, but this is unverified:
+- [lx106-hal](https://github.com/tommie/lx106-hal) and
+- [newlib-xtensa](https://github.com/jcmvbkbc/newlib-xtensa)
 
 ## Added header files
 ```
