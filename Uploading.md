@@ -8,7 +8,7 @@ To upload to the module, configure the following pins:
 | GPIO0 | Low |
 | GPIO2 | High |
 
-Pinout is in [[Hardware versions]]
+Pinout is in [[Hardware versions|Hardware_versions]]
 
 ## Uploading
 ```
