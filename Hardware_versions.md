@@ -21,7 +21,7 @@ For enabling the chip in the second version, bind pin `CH_PD` to `VCC` (3.3v).
 | Color | Description
 | ----- | -----------
 | Red   | Tied to VCC, so always on when power is applied
-| Blue  | UART RX/TX indicator ?
+| Blue  | UART TX indicator
 
 ## ESP-03
 ![](https://github.com/esp8266/esp8266-wiki/blob/master/images/esp-03.jpg)
