@@ -12,5 +12,6 @@
  * [[Examples]]
  * [[Drivers]]
  * [[Chip internals|chip-internals]]
+ * [[Memory Map]]
 * AT Command set
  * [[0.9.1|at_0.9.1]]
