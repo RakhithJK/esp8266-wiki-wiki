@@ -26,12 +26,18 @@ Memory Layout
 
 SPI Flash ROM Layout
 --------------------
-| Address |      Name       |    Description     |
-| ------- | --------------- | ------------------ |
-|  00000h | flash.bin       | Bootloader         |
-|  40000h | irom0text.bin   | User application   |
-|  7C000h | ?               | Some configuration |
-|  7E000h | blank.bin       | Filled with FFh.   |
+This is for ESP IoT SDK version 0.8 and above, supporting OTA upgrades.
+
+| Address | Size |         Name          |       Description        |
+| ------- | ---- | --------------------- | ------------------------ |
+|  00000h | 4k   | boot.bin              | Bootloader               |
+|  01000h | 64k  | flash1.bin            | User application, slot 1 |
+|  11000h | 180k | irom0text1.bin        | SDK libraries, slot 1    |
+|  3E000h | 8k   | master_device_key.bin | OTA device key           |
+|  40000h | 4k   | irom0text.bin         | Unused                   |
+|  41000h | 64k  | flash1.bin            | User application, slot 2 |
+|  51000h | 180k | irom0text1.bin        | SDK libraries, slot 2    |
+|  7E000h | 8k   | blank.bin             | Filled with FFh. May be WiFi configuration are. |
 
 Exception Vectors
 -----------------
@@ -50,5 +56,6 @@ References
 ----------
 - [Forum post Memory Layout, p274](http://www.esp8266.com/viewtopic.php?f=5&t=9&start=30#p274)
 - [Forum post Firmware Dump, p263](http://www.esp8266.com/viewtopic.php?f=6&t=39&start=10#p263)
+- [Forum post Memory Layout, p889](http://www.esp8266.com/viewtopic.php?f=5&t=9&start=50#p889)
 - lx106-rc-2010.1/xtensa-elf/lib/xt2000-rt/memmap.xmm
 - [ESP SDK linker scripts](https://github.com/metalheart/esp8266/tree/master/ld)
