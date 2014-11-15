@@ -27,12 +27,12 @@ The following is encoded in `app/gen_misc.sh`, but we use the crosstool-NG binut
 
 ```
 cd .output/eagle/debug/image
-xtensa-lx106-elf-objcopy --only-section .irom0.text -O binary eagle.app.v6.out eagle.app.v6.irom0text.bin
 esptool -eo eagle.app.v6.out -bo eagle.app.v6.flash.bin -bs .text -bs .data -bs .rodata -bc -ec
-cp eagle.app.v6.irom0text.bin ../../../../../../bin/
-cp eagle.app.v6.flash.bin ../../../../../../bin/
+xtensa-lx106-elf-objcopy --only-section .irom0.text -O binary eagle.app.v6.out eagle.app.v6.irom0text.bin
+cp eagle.app.v6.flash.bin ../../../../../../bin/0x00000.bin
+cp eagle.app.v6.irom0text.bin ../../../../../../bin/0x40000.bin
 ```
 
-Now you have two files in `/opt/Espressif/ESP8266_SDK/bin/`, one with the application code and data (called `flash`) and one with SDK code (called `irom0text`).
+Now you have two files in `/opt/Espressif/ESP8266_SDK/bin/`, one with the application code and data (called `0x00000.bin`) and one with SDK code (called `0x40000.bin`).
 
 Move on to [[Uploading]] to a device.
