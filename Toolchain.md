@@ -25,6 +25,8 @@ cd crosstool-NG
 ./ct-ng build
 ```
 
+If you install crosstool-ng outside of the build directory (by changing `--prefix` above), you need to copy `local-patches/` and `overlays/` to `<prefix>/lib/ct-ng.1.20.0/`
+
 #Setting up the SDK
 download esp_iot_sdk_v0.9.2_14_10_24.zip: http://bbs.espressif.com/viewtopic.php?f=5&t=3
 
