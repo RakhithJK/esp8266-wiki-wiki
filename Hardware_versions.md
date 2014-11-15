@@ -1,19 +1,26 @@
-## Version 1
-![](https://github.com/esp8266/esp8266-wiki/blob/master/images/module_v1.jpg)
-### Alternative names
-ESP-?
-## Version 2
-![](https://github.com/esp8266/esp8266-wiki/blob/master/images/module_v2.png)
+## ESP-01, Versions 1 and 2
+<img title="Version 1" src="https://github.com/esp8266/esp8266-wiki/blob/master/images/module_v1.jpg" height="200px">
+<img title="Version 2" src="https://github.com/esp8266/esp8266-wiki/blob/master/images/module_v2.png" height="200px">
+
 ### Info
-For starting the chip bind pin CH_PD to VCC (3.3v)
-### Alternative names
-ESP-?
+For enabling the chip in the second version, bind pin `CH_PD` to `VCC` (3.3v).
+
+### Pins to chip names
+| Pin |   Name   | Description |
+| --- | -------- | ----------- |
+| 1   | GND      | Ground
+| 2   | U0TXD    | UART0 Transmit
+| 3   | GPIO2    |
+| 4   | CHIP_EN  | Chip Enable, active high
+| 5   | GPIO0    |
+| 6   | EXT_RSTB | External reset signal, active low
+| 7   | U0RXD    | UART0 Receive
+| 8   | VDD      | +3.3V power input
 
 ## ESP-03
 ![](https://github.com/esp8266/esp8266-wiki/blob/master/images/esp-03.jpg)
 ### Info
 Starting the module bind CH_PD to VCC (3.3v) and GPIO15 to GND
-
 
 ## ESP8266MOD
 ![](https://github.com/esp8266/esp8266-wiki/blob/master/images/esp-mod.jpg)
