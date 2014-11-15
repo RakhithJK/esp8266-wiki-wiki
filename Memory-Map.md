@@ -24,8 +24,20 @@ Memory Layout
 | 80000000h | rambp  | <10000000h | RAM  | RW  | Uncached RAM. *Unconfirmed.* Known from the XT2000 memory map. |
 | 90000000h | iobp   | <E000000h  | I/O  | RW? | Uncached I/O. *Unconfirmed.* Known from the XT2000 memory map. |
 
-SPI Flash ROM Layout
---------------------
+SPI Flash ROM Layout (without OTA upgrades)
+-------------------------------------------
+This is for ESP IoT SDK version 0.8 and above.
+
+| Address | Size |           Name            |      Description      |
+| ------- | ---- | ------------------------- | --------------------- |
+|  00000h | 248k | app.v6.flash.bin          | User application      |
+|  3E000h | 8k   | master_device_key.bin     | OTA device key        |
+|  40000h | 240k | irom0text.bin             | SDK libraries, slot 1 |
+|  7C000h | 8k   | esp_init_data_default.bin | Default configuration |
+|  7E000h | 8k   | blank.bin                 | Filled with FFh. May be WiFi configuration. |
+
+SPI Flash ROM Layout (with OTA upgrades)
+----------------------------------------
 This is for ESP IoT SDK version 0.8 and above, supporting OTA upgrades.
 
 | Address | Size |         Name          |       Description        |
@@ -34,10 +46,10 @@ This is for ESP IoT SDK version 0.8 and above, supporting OTA upgrades.
 |  01000h | 64k  | flash1.bin            | User application, slot 1 |
 |  11000h | 180k | irom0text1.bin        | SDK libraries, slot 1    |
 |  3E000h | 8k   | master_device_key.bin | OTA device key           |
-|  40000h | 4k   | irom0text.bin         | Unused                   |
+|  40000h | 4k   |                       | Unused                   |
 |  41000h | 64k  | flash1.bin            | User application, slot 2 |
 |  51000h | 180k | irom0text1.bin        | SDK libraries, slot 2    |
-|  7E000h | 8k   | blank.bin             | Filled with FFh. May be WiFi configuration are. |
+|  7E000h | 8k   | blank.bin             | Filled with FFh. May be WiFi configuration. |
 
 Exception Vectors
 -----------------
@@ -57,5 +69,6 @@ References
 - [Forum post Memory Layout, p274](http://www.esp8266.com/viewtopic.php?f=5&t=9&start=30#p274)
 - [Forum post Firmware Dump, p263](http://www.esp8266.com/viewtopic.php?f=6&t=39&start=10#p263)
 - [Forum post Memory Layout, p889](http://www.esp8266.com/viewtopic.php?f=5&t=9&start=50#p889)
+- [Forum post Cloud update documentation, p2486](http://www.esp8266.com/viewtopic.php?f=5&t=454#p2486)
 - lx106-rc-2010.1/xtensa-elf/lib/xt2000-rt/memmap.xmm
 - [ESP SDK linker scripts](https://github.com/metalheart/esp8266/tree/master/ld)
