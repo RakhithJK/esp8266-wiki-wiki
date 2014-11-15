@@ -32,7 +32,7 @@ This is for ESP IoT SDK version 0.8 and above.
 | ------- | ---- | ------------------------- | --------------------- |
 |  00000h | 248k | app.v6.flash.bin          | User application      |
 |  3E000h | 8k   | master_device_key.bin     | OTA device key        |
-|  40000h | 240k | irom0text.bin             | SDK libraries, slot 1 |
+|  40000h | 240k | app.v6.irom0text.bin      | SDK libraries         |
 |  7C000h | 8k   | esp_init_data_default.bin | Default configuration |
 |  7E000h | 8k   | blank.bin                 | Filled with FFh. May be WiFi configuration. |
 
@@ -43,12 +43,12 @@ This is for ESP IoT SDK version 0.8 and above, supporting OTA upgrades.
 | Address | Size |         Name          |       Description        |
 | ------- | ---- | --------------------- | ------------------------ |
 |  00000h | 4k   | boot.bin              | Bootloader               |
-|  01000h | 64k  | flash1.bin            | User application, slot 1 |
-|  11000h | 180k | irom0text1.bin        | SDK libraries, slot 1    |
+|  01000h | 64k  | app.v6.flash1.bin     | User application, slot 1 |
+|  11000h | 180k | app.v6.irom0text1.bin | SDK libraries, slot 1    |
 |  3E000h | 8k   | master_device_key.bin | OTA device key           |
 |  40000h | 4k   |                       | Unused                   |
-|  41000h | 64k  | flash1.bin            | User application, slot 2 |
-|  51000h | 180k | irom0text1.bin        | SDK libraries, slot 2    |
+|  41000h | 64k  | app.v6.flash1.bin     | User application, slot 2 |
+|  51000h | 180k | app.v6.irom0text1.bin | SDK libraries, slot 2    |
 |  7E000h | 8k   | blank.bin             | Filled with FFh. May be WiFi configuration. |
 
 Exception Vectors
