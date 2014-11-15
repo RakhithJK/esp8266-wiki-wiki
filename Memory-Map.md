@@ -1,0 +1,44 @@
+This page describes the physical memory layout of the ESP8266 family.
+
+Reset Vector
+------------
+The reset vector is 40000000h or 50000000h, which maps to internal ROM.
+
+Memory Layout
+-------------
+|  Address  |  Name  |    Size    | Type | R/W | Description |
+| --------- | ------ | ---------- | ---- | --- | ----------- |
+| 3FF00000h | dport0 | 16         | I/O  | RW? | Memory-mapped I/O. |
+| 3FF40000h | drom0  | <40000h    | ROM  | R?  | *Unconfirmed.* Known from the XT2000 memory map. |
+| 3FF80000h | dram1  | <40000h    | RAM  | RW  | *Unconfirmed.* Known from the XT2000 memory map. |
+| 3FFE8000h | dram0  | 80k        | RAM  | RW  | User data RAM. Available to applications. |
+| 40000000h | brom?  | 64k        | ROM  | RW? | Internal ROM. May be writable somehow, but details unknown. |
+| 40100000h | iram1  | 32k        | RAM  | RW  | Instruction RAM. Shadowed version of 40200000h. |
+| 40200000h | irom0  | <100000h   | ROM  | RW  | SPI Flash ROM? |
+| 40211000h | irom0  | <100000h   | ROM  | RW  | User Application, slot 1. |
+| 40240000h | irom0  | <100000h   | ROM  | RW  | User Application start. Mapped to SPI ROM 40000h. |
+| 40251000h | irom0  | <100000h   | ROM  | RW  | User Application, slot 2. |
+| 50000000h | srom   | <1000000h  | ROM  | R?  | *Unconfirmed.* Known from the XT2000 memory map. |
+| 60000000h | sram   | <4000000h  | RAM  | RW  | *Unconfirmed.* Known from the XT2000 memory map. |
+| 70000000h | iocch  | <E000000h  | I/O  | RW? | Cached I/O. *Unconfirmed.* Known from the XT2000 memory map. |
+| 80000000h | rambp  | <10000000h | RAM  | RW  | Uncached RAM. *Unconfirmed.* Known from the XT2000 memory map. |
+| 90000000h | iobp   | <E000000h  | I/O  | RW? | Uncached I/O. *Unconfirmed.* Known from the XT2000 memory map. |
+
+Exception Vectors
+-----------------
+Unconfirmed. From the XT2000 memory map.
+
+|  Address  |      Name       |
+| --------- | --------------- |
+| 40000000h | Reset           |
+| 40000010h | DebugException  |
+| 40000020h | NMIException    |
+| 40000030h | KernelException |
+| 40000050h | UserException   |
+| 40000070h | DoubleException |
+
+References
+----------
+- [Forum post Memory Layout, p274](http://www.esp8266.com/viewtopic.php?f=5&t=9&start=30#p274)
+- lx106-rc-2010.1/xtensa-elf/lib/xt2000-rt/memmap.xmm
+- [ESP SDK linker scripts](https://github.com/metalheart/esp8266/tree/master/ld)
