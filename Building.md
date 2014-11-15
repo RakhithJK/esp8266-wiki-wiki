@@ -1,5 +1,8 @@
-#Building the AT example
-comment the line #include user_config.h from /opt/Espressif/ESP8266_SDK/include/osapi.h
+Choose one of the examples to build. Either the community-created AT example, or Espressif's IoT demo.
+
+Building the AT Example
+-----------------------
+Remove the line `#include user_config.h` from `/opt/Espressif/ESP8266_SDK/include/osapi.h`.
 ```
 cd ~
 mkdir esp_sources
@@ -9,6 +12,27 @@ cd at
 wget -O Makefile https://raw.githubusercontent.com/esp8266/source-code-examples/master/example.Makefile
 make
 ```
-If the compiler gives a error remove ```#include<stdlib.h>``` from ```user/at_ipCmd.c```
+If the compiler gives an error, remove `#include <stdlib.h>` from `user/at_ipCmd.c`.
 
-Now see [[Uploading]]
+Building the IoT Demo from Espressif
+------------------------------------
+This assumes you have the [[Toolchain]] set up. Note that compiling to support OTA upgrades is beyond the scope of this tutorial.
+
+```
+cd /opt/Espressif/ESP8266_SDK/examples/IoT_Demo
+make
+```
+
+The following is encoded in `app/gen_misc.sh`, but we use the crosstool-NG binutils, and the paths are off-by-one, so we show it in full here. We also use [esptool](https://github.com/tommie/esptool-ck) rather than `genflashbinv6.exe` to not require Windows.
+
+```
+cd .output/eagle/debug/image
+xtensa-lx106-elf-objcopy --only-section .irom0.text -O binary eagle.app.v6.out eagle.app.v6.irom0text.bin
+esptool -eo eagle.app.v6.out -bo eagle.app.v6.flash.bin -bs .text -bs .data -bs .rodata -bc -ec
+cp eagle.app.v6.irom0text.bin ../../../../../../bin/
+cp eagle.app.v6.flash.bin ../../../../../../bin/
+```
+
+Now you have two files in `/opt/Espressif/ESP8266_SDK/bin/`, one with the application code and data (called `flash`) and one with SDK code (called `irom0text`).
+
+Move on to [[Uploading]] to a device.
