@@ -34,6 +34,18 @@ Download `esp_iot_sdk_v0.9.2_14_10_24.zip`: http://bbs.espressif.com/viewtopic.p
 
 Extract the contends of `esp_iot_sdk_v0.9.2_14_10_24.zip` to `/opt/Espressif/ESP8266_SDK/`.
 
+##Patching
+- Python scripts in the ZIP file are not marked executable.
+- We use another toolchain.
+- The example Makefile is slightly buggy.
+
+```
+cd /opt/Espressif/ESP8266_SDK
+chmod 755 tools/*.py
+sed -i -e 's/xt-ar/xtensa-lx106-elf-ar/' -e 's/xt-xcc/xtensa-lx106-elf-gcc/' -e 's/xt-objcopy/xtensa-lx106-elf-objcopy/' Makefile
+sed -i -e 's/-L\.\.\/lib/-L..\/..\/lib/' -e 's/\.\.\/ld/..\/..\/ld/' examples/IoT_Demo/Makefile
+```
+
 #Installing Xtensa libraries and headers
 ```
 wget -O /opt/Espressif/ESP8266_SDK/lib/libc.a https://github.com/esp8266/esp8266-wiki/raw/master/libs/libc.a
