@@ -45,6 +45,7 @@ cd /opt/Espressif/ESP8266_SDK
 chmod 755 tools/*.py
 sed -i -e 's:/usr/bin/python$:/usr/bin/python2:' tools/*.py
 sed -i -e 's/xt-ar/xtensa-lx106-elf-ar/' -e 's/xt-xcc/xtensa-lx106-elf-gcc/' -e 's/xt-objcopy/xtensa-lx106-elf-objcopy/' Makefile
+sed -i -e 's/xt-nm/xtensa-lx106-elf-nm/' tools/gen_appbin.py
 sed -i -e 's:-L\.\./lib:-L../../lib:' -e 's:\.\./ld:../../ld:' examples/IoT_Demo/Makefile
 ```
 
