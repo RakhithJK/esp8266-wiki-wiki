@@ -19,7 +19,7 @@ Building the IoT Demo from Espressif
 This assumes you have the [[Toolchain]] set up. Note that compiling to support OTA upgrades is beyond the scope of this tutorial.
 
 ```
-cd /opt/Espressif/ESP8266_SDK/examples/IoT_Demo
+cd /opt/Espressif/ESP8266_SDK/IoT_Demo
 make
 ```
 
@@ -29,8 +29,8 @@ The following is encoded in `app/gen_misc.sh`, but we use the crosstool-NG binut
 cd .output/eagle/debug/image
 esptool -eo eagle.app.v6.out -bo eagle.app.v6.flash.bin -bs .text -bs .data -bs .rodata -bc -ec
 xtensa-lx106-elf-objcopy --only-section .irom0.text -O binary eagle.app.v6.out eagle.app.v6.irom0text.bin
-cp eagle.app.v6.flash.bin ../../../../../../bin/0x00000.bin
-cp eagle.app.v6.irom0text.bin ../../../../../../bin/0x40000.bin
+cp eagle.app.v6.flash.bin ../../../../../bin/0x00000.bin
+cp eagle.app.v6.irom0text.bin ../../../../../bin/0x40000.bin
 ```
 
 Now you have two files in `/opt/Espressif/ESP8266_SDK/bin/`, one with the application code and data (called `0x00000.bin`) and one with SDK code (called `0x40000.bin`).
