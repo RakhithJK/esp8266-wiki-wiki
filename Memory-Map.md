@@ -2,7 +2,7 @@ This page describes the physical memory layout of the ESP8266 family.
 
 Reset Vector
 ------------
-The reset vector is 40000000h, which maps to internal ROM.
+The reset vector is 40000080h, which maps to internal ROM.
 
 Memory Layout
 -------------
@@ -60,16 +60,14 @@ This is for ESP IoT SDK version 0.8 and above, supporting OTA upgrades.
 
 Exception Vectors
 -----------------
-Unconfirmed. From the XT2000 memory map.
-
 |  Address  |      Name       |
 | --------- | --------------- |
-| 40000000h | Reset           |
 | 40000010h | DebugException  |
 | 40000020h | NMIException    |
 | 40000030h | KernelException |
 | 40000050h | UserException   |
 | 40000070h | DoubleException |
+| 40000080h | Reset           |
 
 References
 ----------
