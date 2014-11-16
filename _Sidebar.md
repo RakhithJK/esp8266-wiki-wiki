@@ -3,6 +3,7 @@
  1. [[Toolchain]]
  1. [[Building]]
  1. [[Uploading]]
+* [[Community]]
 * Hardware
  * [[Module Versions|Hardware_versions]]
  * [[Chip Versions|Hardware_ESP8266 Versions]]
