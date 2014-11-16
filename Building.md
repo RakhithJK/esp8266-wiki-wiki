@@ -11,7 +11,7 @@ unzip at_v0.19_14_10_30.zip
 cd at_v0.19_on_SDKv0.9.2
 make
 ```
-This should be enough before [[#Preparing the Firmware Image]].
+This should be enough before [Preparing the Firmware Image](#preparing-the-firmware-image).
 
 ### IoT Demo
 ```
