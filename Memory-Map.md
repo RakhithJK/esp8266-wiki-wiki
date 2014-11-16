@@ -14,7 +14,7 @@ Memory Layout
 | 3FF10000h |        |            | No   |     | Unmapped, zeroes.
 | 3FF20000h | ?      |            | ?    | RW? | Unidentified data.
 | 3FF30000h |        |            | No   |     | Unmapped, zeroes.
-| 3FFC0000h | ?      |     20000h | ?    | RW? | Tables of sequentially increasing uint32.
+| 3FFC0000h | ?      |     20000h | ?    | RW? | uint32 mapping to the address it is located at. What is this?
 | 3FFE0000h |        |            | No   |     | Unmapped, zeroes.
 | 3FFE8000h | dram0  |     14000h | RAM  | RW  | User data RAM. Available to applications.
 | 3FFFC000h |        |      4000h | RAM  |     | ETS system data RAM.
