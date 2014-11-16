@@ -6,7 +6,7 @@
 | ATE | same as AT  | | | |
 | AT+RST | Soft reset | | | |
 | AT+GMR | Show software and SDK version
-| AT+CWMODE | Wireless mode | AT+CWMODE=? | | | |  1=Station, 2=AP, 3=Hybrid(both)
+| AT+CWMODE | Wireless mode | AT+CWMODE={1-3} | AT+CWMODE? | | 1=Station, 2=AP, 3=Hybrid(both)
 | AT+CWJAP | Join a AP (only in mode 1 or 3 | AT+CWJAP="ssid","password" | AT+CWJAP? | | replace ssid with your network name and password with the network password (leave the quotes)
 | AT+CWLAP | List the discoverd ssid's | | AT+CWLAP | | |
 | AT+CWQAP | Leave the SSID | AT+CWQAP | | | |
