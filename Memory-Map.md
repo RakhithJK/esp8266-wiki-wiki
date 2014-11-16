@@ -2,27 +2,34 @@ This page describes the physical memory layout of the ESP8266 family.
 
 Reset Vector
 ------------
-The reset vector is 40000000h or 50000000h, which maps to internal ROM.
+The reset vector is 40000000h, which maps to internal ROM.
 
 Memory Layout
 -------------
 |  Address  |  Name  |    Size    | Type | R/W | Description |
-| --------- | ------ | ---------- | ---- | --- | ----------- |
-| 3FF00000h | dport0 | 16         | I/O  | RW? | Memory-mapped I/O. |
-| 3FF40000h | drom0  | <40000h    | ROM  | R?  | *Unconfirmed.* Known from the XT2000 memory map. |
-| 3FF80000h | dram1  | <40000h    | RAM  | RW  | *Unconfirmed.* Known from the XT2000 memory map. |
-| 3FFE8000h | dram0  | 80k        | RAM  | RW  | User data RAM. Available to applications. |
-| 40000000h | brom?  | 64k        | ROM  | RW? | Internal ROM. May be writable somehow, but details unknown. |
-| 40100000h | iram1  | 32k        | RAM  | RW  | Instruction RAM. Shadowed version of 40200000h. |
-| 40200000h | irom0  | <100000h   | ROM  | RW  | SPI Flash ROM? |
-| 40211000h | irom0  | <100000h   | ROM  | RW  | User application, slot 1. |
-| 40240000h | irom0  | <100000h   | ROM  | RW  | User application start.   |
-| 40251000h | irom0  | <100000h   | ROM  | RW  | User application, slot 2. |
-| 50000000h | srom   | <1000000h  | ROM  | R?  | *Unconfirmed.* Known from the XT2000 memory map. |
-| 60000000h | sram   | <4000000h  | RAM  | RW  | *Unconfirmed.* Known from the XT2000 memory map. |
-| 70000000h | iocch  | <E000000h  | I/O  | RW? | Cached I/O. *Unconfirmed.* Known from the XT2000 memory map. |
-| 80000000h | rambp  | <10000000h | RAM  | RW  | Uncached RAM. *Unconfirmed.* Known from the XT2000 memory map. |
-| 90000000h | iobp   | <E000000h  | I/O  | RW? | Uncached I/O. *Unconfirmed.* Known from the XT2000 memory map. |
+| ---------:| ------ | ----------:|:----:| --- | ----------- |
+| 00000000h |        |            | Exc  |     | Causes fault when reading.
+| 20000000h |        |            | No   |     | Unmapped, repeated pattern of 00 80 00 00.
+| 3FF00000h | dport0 |      1000h | I/O  | RW? | Memory-mapped I/O, repeated every 100h.
+| 3FF10000h |        |            | No   |     | Unmapped, zeroes.
+| 3FF20000h | ?      |            | ?    | RW? | Unidentified data.
+| 3FF30000h |        |            | No   |     | Unmapped, zeroes.
+| 3FFC0000h | ?      |     20000h | ?    | RW? | Tables of sequentially increasing uint32.
+| 3FFE0000h |        |            | No   |     | Unmapped, zeroes.
+| 3FFE8000h | dram0  |     14000h | RAM  | RW  | User data RAM. Available to applications.
+| 3FFFC000h |        |      4000h | RAM  |     | ETS system data RAM.
+| 40000000h | brom?  |     10000h | ROM  | RW? | Internal ROM. May be writable somehow, but details unknown.
+| 40010000h |        |            | No   |     | Unmapped, zeroes.
+| 40100000h | iram1  |     10000h | RAM  | RW  | Instruction RAM. Used by bootloader to load SPI Flash <40000h.
+| 40110000h |        |            | No   |     | Unmapped, zeroes.
+| 40140000h |        |            | No   |     | Unmapped, repeated pattern of 59 31 d8 ec.
+| 40200000h |        |            | No   |     | Unmapped, zeroes. SPI Flash here. Why is this zero? Privileged?
+| 40300000h |        |            | No   |     | Unmapped, repeated pattern of 00 80 00 00.
+| 60000000h | ?      |      1000h | I/O  | RW? | I/O
+| 60001000h | ?      |       800h | ?    | RW? | I/O
+| 60001800h | ?      |       800h | ?    | RW? | Mapped to 60001000h?
+| 60002000h |        |            | Exc  |     | Causes fault when reading.
+| 70000000h |        |  90000000h | No   |     | Unmapped, repeated pattern of 00 80 00 00.
 
 SPI Flash ROM Layout (without OTA upgrades)
 -------------------------------------------
