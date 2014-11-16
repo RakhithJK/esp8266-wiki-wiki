@@ -44,12 +44,12 @@ Extract the contends of `esp_iot_sdk_v0.9.2_14_10_24.zip` to `/opt/Espressif/ESP
 
 ##Patching
 - We use another toolchain.
-- The example Makefile is slightly buggy.
+- The IoT_Demo Makefile assumes it's one directory up (for libraries and linker script).
 
 ```
 cd /opt/Espressif/ESP8266_SDK
 sed -i -e 's/xt-ar/xtensa-lx106-elf-ar/' -e 's/xt-xcc/xtensa-lx106-elf-gcc/' -e 's/xt-objcopy/xtensa-lx106-elf-objcopy/' Makefile
-sed -i -e 's:-L\.\./lib:-L../../lib:' -e 's:\.\./ld:../../ld:' examples/IoT_Demo/Makefile
+mv examples/IoT_Demo .
 ```
 
 #Installing Xtensa libraries and headers
