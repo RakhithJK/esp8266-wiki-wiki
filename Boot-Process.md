@@ -1,8 +1,8 @@
 Overview
 --------
-- Reset vector is 40000000h (unconfirmed).
-- Boots into Xtensa SROM (unconfirmed).
-- Transfers control to Espressif code in IROM0 (unconfirmed).
+- Reset vector is 0x40000080.
+- Boots into Xtensa XTOS code in IROM0.
+- Transfers control to Espressif code in IROM0.
 - Starts executing ESP SDK-code shadowed SPI ROM (unconfirmed).
 
 ESP Boot Modes
