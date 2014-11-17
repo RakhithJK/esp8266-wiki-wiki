@@ -21,10 +21,10 @@ Memory Layout
 | 40000000h | brom?  |     10000h | ROM  | RW? | Internal ROM. May be writable somehow, but details unknown.
 | 40010000h |        |            | No   |     | Unmapped, zeroes.
 | 40100000h | iram1  |     10000h | RAM  | RW  | Instruction RAM. Used by bootloader to load SPI Flash <40000h.
-| 40110000h |        |            | No   |     | Unmapped, zeroes.
-| 40140000h |        |            | No   |     | Unmapped, repeated pattern of 59 31 d8 ec.
-| 40200000h |        |            | No   |     | Unmapped, zeroes. SPI Flash here. Why is this zero? Privileged?
-| 40300000h |        |            | No   |     | Unmapped, repeated pattern of 00 80 00 00.
+| 40110000h |        |            | ?    |     | Zeroes.
+| 40140000h |        |            | ?    |     | Repeated pattern of 59 31 d8 ec.
+| 40200000h |        |            | ?    |     | Zeroes. SPI Flash loads/is mapped here.
+| 40300000h |        |            | ?    |     | Unmapped, repeated pattern of 00 80 00 00.
 | 60000000h | ?      |      1000h | I/O  | RW? | I/O
 | 60001000h | ?      |       800h | ?    | RW? | I/O
 | 60001800h | ?      |       800h | ?    | RW? | Mapped to 60001000h?
