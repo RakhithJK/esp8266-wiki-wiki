@@ -25,9 +25,9 @@ Memory Layout
 | 40140000h |        |            | ?    |     | Repeated pattern of 59 31 d8 ec.
 | 40200000h |        |            | ?    |     | Zeroes. SPI Flash loads/is mapped here.
 | 40300000h |        |            | ?    |     | Unmapped, repeated pattern of 00 80 00 00.
-| 60000000h | ?      |      1000h | I/O  | RW? | I/O
-| 60001000h | ?      |       800h | ?    | RW? | I/O
-| 60001800h | ?      |       800h | ?    | RW? | Mapped to 60001000h?
+| 60000000h | ?      |      1000h | I/O  | RW? | Uncached I/O
+| 60001000h | ?      |       800h | ?    | RW? | Uncached I/O
+| 60001800h | ?      |       800h | ?    | RW? | Uncached. Mapped to 60001000h?
 | 60002000h |        |            | Exc  |     | Causes fault when reading.
 | 70000000h |        |  90000000h | No   |     | Unmapped, repeated pattern of 00 80 00 00.
 
