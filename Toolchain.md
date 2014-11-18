@@ -4,14 +4,14 @@
 ```
 apt-get install git autoconf build-essential gperf bison flex texinfo libtool libncurses5-dev wget gawk libc6-dev-amd64 python-serial libexpat-dev
 mkdir /opt/Espressif
-chown $username /opt/Espressif 
+chown $username /opt/Espressif/
 ```
 
 ### 64-bit Debian (Linux)
 ```
 apt-get install git autoconf build-essential gperf bison flex texinfo libtool libncurses5-dev wget gawk libc6-dev-i386 python-serial libexpat-dev
 mkdir /opt/Espressif
-chown $username /opt/Espressif 
+chown $username /opt/Espressif/
 ```
 (replace $username with the name of the local user)
 
@@ -71,8 +71,9 @@ dpkg -i esptool_0.0.2-1_i386.deb
 
 #Installing the ESP upload tool
 ```
-cd /opt/Espressif/
+cd /opt/Espressif
 git clone https://github.com/themadinventor/esptool esptool-py
+ln -s $PWD/esptool-py/esptool.py crosstool-NG/builds/xtensa-lx106-elf/bin/
 ```
 
 Next step: [[Building]]
