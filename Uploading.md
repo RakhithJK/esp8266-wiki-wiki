@@ -11,9 +11,9 @@ Pinout is in [[Hardware versions|Hardware_versions]]
 
 ## Uploading
 ```
-/opt/Espressif/esptool-py/esptool.py --port /dev/ttyUSB0 write_flash 0x00000 0x00000.bin
+/opt/Espressif/esptool-py/esptool.py --port /dev/ttyUSB0 write_flash 0x00000 eagle.app.v6.flash.bin
 sleep 3
-/opt/Espressif/esptool-py/esptool.py --port /dev/ttyUSB0 write_flash 0x40000 0x40000.bin
+/opt/Espressif/esptool-py/esptool.py --port /dev/ttyUSB0 write_flash 0x40000 eagle.app.v6.irom0text.bin
 ```
 
 ### Caveats
