@@ -31,6 +31,7 @@ cd crosstool-NG
 ./bootstrap && ./configure --prefix=`pwd` && make && make install
 ./ct-ng xtensa-lx106-elf
 ./ct-ng build
+PATH=$PWD/builds/xtensa-lx106-elf/bin:$PATH
 ```
 
 If you install crosstool-NG outside of the build directory (by changing `--prefix` above), you need to copy `local-patches/` and `overlays/` to `<prefix>/lib/ct-ng.1.20.0/`
@@ -57,7 +58,6 @@ mv examples/IoT_Demo .
 wget -O /opt/Espressif/ESP8266_SDK/lib/libc.a https://github.com/esp8266/esp8266-wiki/raw/master/libs/libc.a
 wget -O /opt/Espressif/ESP8266_SDK/lib/libhal.a https://github.com/esp8266/esp8266-wiki/raw/master/libs/libhal.a
 wget -O /opt/Espressif/include.tgz https://github.com/esp8266/esp8266-wiki/raw/master/include.tgz
-cd /opt/Espressif/
 tar -xvzf include.tgz
 ```
 These are binary libraries from the Xtensa SDK. You can also build them from source, but this has not yet been tested fully:
