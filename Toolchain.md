@@ -39,7 +39,16 @@ If you install crosstool-NG outside of the build directory (by changing `--prefi
 Note the default `xtensa-lx106-elf` configuration installs the compiler in `${CT_TOP_DIR}/builds/${CT_TARGET}`, not under `x-tools/`.
 
 #Setting up the Espressif SDK
-Download `esp_iot_sdk_v0.9.2_14_10_24.zip` from http://bbs.espressif.com/viewtopic.php?f=5&t=3 and extract the contents to `/opt/Espressif/ESP8266_SDK/`.
+- Download `esp_iot_sdk_v0.9.2_14_10_24.zip` from http://bbs.espressif.com/viewtopic.php?f=5&t=3.
+- Extract the contents to `/opt/Espressif/ESP8266_SDK/`.
+
+```
+cd /opt/Espressif
+mkdir ESP8266_SDK
+wget -O esp_iot_sdk_v0.9.2_14_10_24.zip http://bbs.espressif.com/download/file.php?id=9
+unzip esp_iot_sdk_v0.9.2_14_10_24.zip
+mv esp_iot_sdk_v0.9.2 ESP8266_SDK
+```
 
 ##Patching
 - We use another toolchain.
@@ -64,8 +73,11 @@ These are binary libraries from the Xtensa SDK. You can also build them from sou
 - [newlib-xtensa](https://github.com/jcmvbkbc/newlib-xtensa)
 
 #Installing the ESP image tool
-Download the deb for esptool from the Git repo or get the [source](https://github.com/esp8266/esp8266-wiki/raw/master/deb/src/esptool_0.0.2.orig.tar.gz) and build yourself. Also available as a [Git repository](https://github.com/tommie/esptool-ck) for online browsing.
+Download the [deb](https://github.com/esp8266/esp8266-wiki/raw/master/deb/esptool_0.0.2-1_i386.deb) for esptool from the Git repo or get the [source](https://github.com/esp8266/esp8266-wiki/raw/master/deb/src/esptool_0.0.2.orig.tar.gz) and build yourself. Also available as a [Git repository](https://github.com/tommie/esptool-ck) for online browsing.
+
 ```
+cd /opt/Espressif
+wget -O esptool_0.0.2-1_i386.deb https://github.com/esp8266/esp8266-wiki/raw/master/deb/esptool_0.0.2-1_i386.deb
 dpkg -i esptool_0.0.2-1_i386.deb
 ```
 
