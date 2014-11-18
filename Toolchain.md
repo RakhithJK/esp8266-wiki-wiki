@@ -39,9 +39,7 @@ If you install crosstool-NG outside of the build directory (by changing `--prefi
 Note the default `xtensa-lx106-elf` configuration installs the compiler in `${CT_TOP_DIR}/builds/${CT_TARGET}`, not under `x-tools/`.
 
 #Setting up the Espressif SDK
-Download `esp_iot_sdk_v0.9.2_14_10_24.zip`: http://bbs.espressif.com/viewtopic.php?f=5&t=3
-
-Extract the contends of `esp_iot_sdk_v0.9.2_14_10_24.zip` to `/opt/Espressif/ESP8266_SDK/`.
+Download `esp_iot_sdk_v0.9.2_14_10_24.zip` from http://bbs.espressif.com/viewtopic.php?f=5&t=3 and extract the contents to `/opt/Espressif/ESP8266_SDK/`.
 
 ##Patching
 - We use another toolchain.
