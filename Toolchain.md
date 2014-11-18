@@ -55,9 +55,10 @@ mv examples/IoT_Demo .
 
 #Installing Xtensa libraries and headers
 ```
-wget -O /opt/Espressif/ESP8266_SDK/lib/libc.a https://github.com/esp8266/esp8266-wiki/raw/master/libs/libc.a
-wget -O /opt/Espressif/ESP8266_SDK/lib/libhal.a https://github.com/esp8266/esp8266-wiki/raw/master/libs/libhal.a
-wget -O /opt/Espressif/include.tgz https://github.com/esp8266/esp8266-wiki/raw/master/include.tgz
+cd /opt/Espressif/ESP8266_SDK
+wget -O lib/libc.a https://github.com/esp8266/esp8266-wiki/raw/master/libs/libc.a
+wget -O lib/libhal.a https://github.com/esp8266/esp8266-wiki/raw/master/libs/libhal.a
+wget -O include.tgz https://github.com/esp8266/esp8266-wiki/raw/master/include.tgz
 tar -xvzf include.tgz
 ```
 These are binary libraries from the Xtensa SDK. You can also build them from source, but this has not yet been tested fully:
