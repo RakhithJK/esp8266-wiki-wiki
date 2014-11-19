@@ -15,13 +15,33 @@ The Espressif code can boot in different modes, selected on power-up based on GP
 |   L  |   H   |   H   | Flash | Boot from SPI Flash
 |   H  |   x   |   x   | SDIO  | Boot from SD-card
 
+Flow
+----
+
+### ResetHandler
+- Set interrupt level 1
+- Set processor modes (see separate section)
+- Copy SROM data to SRAM
+- Goto `_start`
+
+### _start
+- Set Ring 0
+- Clear callback vector
+- Set up stack at 3FFFFFFFh
+- Call `main`
+
+### main
+- Initialize UART0
+  - `iomux.u0txd &= 0xE4F`
+  - `iomux.gpio2 = (iomux.gpio2 & 0xECF) | 0x100`
+
 Processor Modes
 ---------------
 - Only Ring 0 used
 - TLBs (D and I) are set to
-  - 0x00000000-0x1FFFFFFF: Illegal
-  - 0x20000000-0x5FFFFFFF: RWX, Cache Write-Through
-  - 0x60000000-0xFFFFFFFF: RWX, Bypass Cache
+  - 00000000h-1FFFFFFFh: Illegal
+  - 20000000h-5FFFFFFFh: RWX, Cache Write-Through
+  - 60000000h-FFFFFFFFh: RWX, Bypass Cache
 
 References
 ----------
