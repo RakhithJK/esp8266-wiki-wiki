@@ -79,8 +79,22 @@ Most of them live in 60000000h.
 |    60000300h |  74h | gpio  | *Unconfirmed:* The timer config registers, see `include/eagle_soc.h`
 |    60000600h |  28h | timer | *Unconfirmed:* The timer config registers, see `include/eagle_soc.h`
 |    60000700h |  A4h | rtc   | *Unconfirmed:* The RTC config registers, see `include/eagle_soc.h`
-|    60000800h |  44h | iomux | *Unconfirmed:* The IO MUX config registers, see `include/eagle_soc.h`
+|    60000800h |  44h | iomux | The IO MUX config registers, see `include/eagle_soc.h`
 |    60000F00h |  80h | uart1 | The UART1 config registers, see `examples/IoT_Demo/include/drivers/uart_register.h`
+
+### iomux Pin Registers (60000804h&ndash;60000843h)
+
+```
+31    24       16        8        0
+-------- -ffff--- -------- ud--UDEe
+          `- Function      ||  |||`- Output Enable
+                           ||  ||`- Output Enable during sleep
+                           ||  |`- Pull-down during sleep
+                           ||  `- Pull-up during sleep
+                           |`- Pull-down
+                           `- Pull-up
+```
+
 References
 ----------
 - [Forum post Memory Layout, p274](http://www.esp8266.com/viewtopic.php?f=5&t=9&start=30#p274)
