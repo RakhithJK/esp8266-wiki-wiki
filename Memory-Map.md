@@ -69,6 +69,18 @@ Exception Vectors
 | 40000070h | DoubleException |
 | 40000080h | Reset           |
 
+Memmory-Mapped I/O Registers
+----------------------------
+Most of them live in 60000000h.
+
+| Base Address | Size | Name  | Description
+| ------------:| ----:| ----- | ---------------
+|    60000000h |  80h | uart0 | The UART0 config registers, see `examples/IoT_Demo/include/drivers/uart_register.h`
+|    60000300h |  74h | gpio  | *Unconfirmed:* The timer config registers, see `include/eagle_soc.h`
+|    60000600h |  28h | timer | *Unconfirmed:* The timer config registers, see `include/eagle_soc.h`
+|    60000700h |  A4h | rtc   | *Unconfirmed:* The RTC config registers, see `include/eagle_soc.h`
+|    60000800h |  44h | iomux | *Unconfirmed:* The IO MUX config registers, see `include/eagle_soc.h`
+|    60000F00h |  80h | uart1 | The UART1 config registers, see `examples/IoT_Demo/include/drivers/uart_register.h`
 References
 ----------
 - [Forum post Memory Layout, p274](http://www.esp8266.com/viewtopic.php?f=5&t=9&start=30#p274)
