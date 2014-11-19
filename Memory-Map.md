@@ -37,11 +37,11 @@ This is for ESP IoT SDK version 0.8 and above.
 
 | Address | Size |           Name            |      Description      |
 | ------- | ---- | ------------------------- | --------------------- |
-|  00000h | 248k | app.v6.flash.bin          | User application      |
-|  3E000h | 8k   | master_device_key.bin     | OTA device key        |
-|  40000h | 240k | app.v6.irom0text.bin      | SDK libraries         |
-|  7C000h | 8k   | esp_init_data_default.bin | Default configuration |
-|  7E000h | 8k   | blank.bin                 | Filled with FFh. May be WiFi configuration. |
+|  00000h | 248k | app.v6.flash.bin          | User application
+|  3E000h | 8k   | master_device_key.bin     | OTA device key. *Unconfirmed:* Not used without OTA
+|  40000h | 240k | app.v6.irom0text.bin      | SDK libraries
+|  7C000h | 8k   | esp_init_data_default.bin | Default configuration
+|  7E000h | 8k   | blank.bin                 | Filled with FFh. May be WiFi configuration
 
 SPI Flash ROM Layout (with OTA upgrades)
 ----------------------------------------
