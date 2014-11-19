@@ -32,6 +32,7 @@ Flow
 
 ### main
 - Initialize UART0
+  - 115,200 bps, 8N1
   - `iomux.u0txd &= 0xE4F`
   - `iomux.gpio2 = (iomux.gpio2 & 0xECF) | 0x100`
 
