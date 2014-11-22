@@ -4,7 +4,7 @@ This assumes you have the [[Toolchain]] set up. Note that compiling to support O
 **Note:** This is using a fork of the examples that has fixes to build more easily. Use `https://github.com/esp8266/source-code-examples.git` once it has has been fixed.
 
 ```
-cd /opt/Espressif/ESP8266_SDK
+cd /opt/Espressif
 git clone https://github.com/tommie/source-code-examples.git
 cd source-code-examples/blinky
 make
