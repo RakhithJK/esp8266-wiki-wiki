@@ -9,14 +9,24 @@ To upload to the module, configure the following pins:
 
 Pinout is in [[Hardware versions|Hardware_versions]]
 
-## Uploading
+## Uploading the Blinky Example
 ```
-/opt/Espressif/esptool-py/esptool.py --port /dev/ttyUSB0 write_flash 0x00000 eagle.app.v6.flash.bin
-sleep 3
-/opt/Espressif/esptool-py/esptool.py --port /dev/ttyUSB0 write_flash 0x40000 eagle.app.v6.irom0text.bin
+cd /opt/Espressif/source-code-examples/blinky
+make ESPPORT=/dev/ttyUSB0 flash
 ```
 
-### Caveats
+Your device should start toggling GPIO2 a second or so after `make` completes.
+
+## Uploading the IoT Demo
+```
+cd /opt/Espressif/ESP8266_SDK/IoT_Demo
+cd .output/eagle/debug/image
+/opt/Espressif/esptool-py/esptool.py --port /dev/ttyUSB0 write_flash 0x00000 eagle.app.v6.flash.bin 0x40000 eagle.app.v6.irom0text.bin
+```
+
+The procedure is similar for the AT Demo, but the directory is `/opt/Espressif/ESP8266_SDK/at_v0.19_on_SDKv0.9.2` instead.
+
+## Caveats
 - Note to Windows users: For the port argument, use standard port names, e.g. `COM3`.
 - Sometimes a reset is required between uploading the first and second file.
-- There are some cases that the upload fails with "Failed to leave Flash mode". This is normal your upload went without issues.
+- There are some cases where the upload fails with "Failed to leave Flash mode". Try updating to a newer version of `esptool-py` or [this fixed version](https://github.com/tommie/esptool.git).
