@@ -1,11 +1,9 @@
 This assumes you have the [[Toolchain]] set up. Note that compiling to support OTA upgrades is beyond the scope of this tutorial.
 
 ## Blinky, A Community Example
-**Note:** This is using a fork of the examples that has fixes to build more easily. Use `https://github.com/esp8266/source-code-examples.git` once it has has been fixed.
-
 ```
 cd /opt/Espressif
-git clone https://github.com/tommie/source-code-examples.git
+git clone https://github.com/esp8266/source-code-examples.git
 cd source-code-examples/blinky
 make
 ```
