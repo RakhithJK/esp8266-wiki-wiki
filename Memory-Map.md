@@ -19,7 +19,7 @@ Memory Layout
 | 3FFE8000h | dram0  |     14000h | RAM  | RW  | User data RAM. Available to applications.
 | 3FFFC000h |        |      4000h | RAM  |     | ETS system data RAM.
 | 40000000h | brom?  |     10000h | ROM  | RW? | Internal ROM. May be writable somehow, but details unknown.
-| 40010000h |        |            | No   |     | Unmapped, zeroes.
+| 40010000h |        |            | No   |     | Zeroes. Assumed to be unmapped.
 | 40100000h | iram1  |     10000h | RAM  | RW  | Instruction RAM. Used by bootloader to load SPI Flash <40000h.
 | 40110000h |        |            | ?    |     | Zeroes.
 | 40140000h |        |            | ?    |     | Repeated pattern of 59 31 d8 ec.
