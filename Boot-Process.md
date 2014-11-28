@@ -49,4 +49,4 @@ References
 - [Chinese seller with boot modes](http://detail.1688.com/offer/40258194242.html?tracelog=gsda_offer)
 - [Translated boot modes](https://drive.google.com/file/d/0ByLNRzaQc0jPV0xaektpdFFoMGs/edit)
 - ESP8266_Module Application Design Guide Chinese.pdf
-- [OTA bootloader, stage 1](http://paste.pm/kej.c), from TheSeven
+- [OTA bootloader, stage 1](http://pastie.org/9748946), from TheSeven
