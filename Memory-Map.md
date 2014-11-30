@@ -23,7 +23,7 @@ Memory Layout
 | 40100000h | iram1  |     10000h | RAM  | RW  | Instruction RAM. Used by bootloader to load SPI Flash <40000h.
 | 40110000h |        |            | ?    |     | Zeroes.
 | 40140000h |        |            | ?    |     | Repeated pattern of 59 31 d8 ec.
-| 40200000h |        |            | ?    |     | Zeroes. SPI Flash loads/is mapped here. Mapping hardware has 32KBytes cache (Unconfirmed). Non-cached code runs 12...13 times slower than code from IRAM. Cached code runs as fast as from IRAM. 
+| 40200000h |        |            | ?    |     | SPI Flash is mapped here. Mapping hardware has 32KBytes cache (Unconfirmed). Non-cached code runs 12...13 times slower than code from IRAM. Cached code runs as fast as from IRAM. This area is readable as data with aligned 4-byte reads.
 | 40300000h |        |            | ?    |     | Unmapped, repeated pattern of 00 80 00 00.
 | 60000000h | ?      |      1000h | I/O  | RW? | Uncached I/O
 | 60001000h | ?      |       800h | ?    | RW? | Uncached I/O
