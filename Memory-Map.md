@@ -82,6 +82,10 @@ Most of them live in 60000000h.
 |    60000800h |  44h | iomux | The IO MUX config registers, see `include/eagle_soc.h`
 |    60000F00h |  80h | uart1 | The UART1 config registers, see `examples/IoT_Demo/include/drivers/uart_register.h`
 
+### dport0 (3FF00000h&ndash;)
+
+* 3FF00014h is a clock setting register. Setting bit 0 changes the CPU to 160 MHz mode. Clearing it means 80 MHz. Note that you need to call `os_update_cpu_frequency(int freq_in_mhz)` when changing the bit. Probably to calibrate timers.
+
 ### iomux Pin Registers (60000804h&ndash;60000843h)
 
 ```
@@ -102,4 +106,5 @@ References
 - [Forum post Memory Layout, p889](http://www.esp8266.com/viewtopic.php?f=5&t=9&start=50#p889)
 - [Forum post Cloud update documentation, p2486](http://www.esp8266.com/viewtopic.php?f=5&t=454#p2486)
 - lx106-rc-2010.1/xtensa-elf/lib/xt2000-rt/memmap.xmm
+- esp_iot_sdk_v0.9.3/examples/IoT_Demo/ssl/app/espconn_ssl.c
 - [ESP SDK linker scripts](https://github.com/metalheart/esp8266/tree/master/ld)
