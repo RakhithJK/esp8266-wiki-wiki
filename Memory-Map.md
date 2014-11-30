@@ -76,6 +76,8 @@ Most of them live in 60000000h.
 | Base Address | Size | Name  | Description
 | ------------:| ----:| ----- | ---------------
 |    60000000h |  80h | uart0 | The UART0 config registers, see `examples/IoT_Demo/include/drivers/uart_register.h`
+|    60000100h | 100h | spi1  | *Unconfirmed:* The SPI controller registers, see examples/IoT_Demo/include/driver/spi_register.h
+|    60000200h | 100h | spi0  | *Unconfirmed:* The SPI controller registers, see examples/IoT_Demo/include/driver/spi_register.h
 |    60000300h |  74h | gpio  | *Unconfirmed:* The timer config registers, see `include/eagle_soc.h`
 |    60000600h |  28h | timer | *Unconfirmed:* The timer config registers, see `include/eagle_soc.h`
 |    60000700h |  A4h | rtc   | *Unconfirmed:* The RTC config registers, see `include/eagle_soc.h`
