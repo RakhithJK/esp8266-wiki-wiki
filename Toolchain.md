@@ -46,8 +46,8 @@ Note the default `xtensa-lx106-elf` configuration installs the compiler in `${CT
 ```
 cd /opt/Espressif
 mkdir ESP8266_SDK
-wget -O esp_iot_sdk_v0.9.3_14_11_21.zip https://github.com/esp8266/esp8266-wiki/blob/master/sdk/esp_iot_sdk_v0.9.3_14_11_21.zip?raw=true
-wget -O esp_iot_sdk_v0.9.3_14_11_21_patch1.zip https://github.com/esp8266/esp8266-wiki/blob/master/sdk/esp_iot_sdk_v0.9.3_14_11_21_patch1.zip?raw=true
+wget -O esp_iot_sdk_v0.9.3_14_11_21.zip https://github.com/esp8266/esp8266-wiki/raw/master/sdk/esp_iot_sdk_v0.9.3_14_11_21.zip
+wget -O esp_iot_sdk_v0.9.3_14_11_21_patch1.zip https://github.com/esp8266/esp8266-wiki/raw/master/sdk/esp_iot_sdk_v0.9.3_14_11_21_patch1.zip
 unzip esp_iot_sdk_v0.9.3_14_11_21.zip
 unzip esp_iot_sdk_v0.9.3_14_11_21_patch1.zip
 mv esp_iot_sdk_v0.9.3 ESP8266_SDK
