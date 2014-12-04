@@ -15,9 +15,9 @@ Choose one of the examples to build. Either the AT demo, pre-programmed in a lot
 ### The AT Demo
 ```
 cd /opt/Espressif/ESP8266_SDK
-wget -O at_v0.19_14_10_30.zip http://bbs.espressif.com/download/file.php?id=13
-unzip at_v0.19_14_10_30.zip
-cd at_v0.19_on_SDKv0.9.2
+wget -O at_v0.20_14_11_28.zip https://github.com/esp8266/esp8266-wiki/raw/master/sdk/at_v0.20_14_11_28.zip
+unzip at_v0.20_14_11_28.zip
+cd at_v0.20_on_SDKv0.9.3/at
 make
 ```
 This should be enough before [Preparing the Firmware Image](#preparing-the-firmware-image).
