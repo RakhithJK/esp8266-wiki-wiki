@@ -2,14 +2,14 @@
 ## Install needed dependencies (as root)
 ### 32-Bit Debian (Linux)
 ```
-apt-get install git autoconf build-essential gperf bison flex texinfo libtool libncurses5-dev wget gawk libc6-dev-amd64 python-serial libexpat-dev
+apt-get install git autoconf build-essential gperf bison flex texinfo libtool libncurses5-dev wget gawk libc6-dev-i386 python-serial libexpat-dev
 mkdir /opt/Espressif
 chown $username /opt/Espressif/
 ```
 
 ### 64-bit Debian (Linux)
 ```
-apt-get install git autoconf build-essential gperf bison flex texinfo libtool libncurses5-dev wget gawk libc6-dev-i386 python-serial libexpat-dev
+apt-get install git autoconf build-essential gperf bison flex texinfo libtool libncurses5-dev wget gawk libc6-dev-amd64 python-serial libexpat-dev
 mkdir /opt/Espressif
 chown $username /opt/Espressif/
 ```
