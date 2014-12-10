@@ -10,6 +10,9 @@ Welcome to the esp8266 wiki!
 * It's a wireless [SoC](https://en.wikipedia.org/wiki/System_on_a_chip)
 * It has GPIO, I2C, ADC, SPI, PWM and some more
 * It's running at 80MHz
+* 32KBytes of instruction RAM
+* 96KBytes of data RAM
+* 64KBytes boot ROM
 * It has a Winbond [[W25Q40BVNIG]] SPI flash
 * It's a RISC architecture
 * The core is a 106micro Diamond Standard core (LX3) made by [Tensilica](http://ip.cadence.com/)
