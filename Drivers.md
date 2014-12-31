@@ -6,3 +6,6 @@
 
 ## Sensors
 * DHT22 (not lib ready) https://github.com/fasmide/esp_dht22
+
+## MQTT
+* https://github.com/tuanpmt/esp_mqtt
