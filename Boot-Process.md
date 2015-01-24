@@ -15,6 +15,8 @@ The Espressif code can boot in different modes, selected on power-up based on GP
 |   L  |   H   |   H   | Flash | Boot from SPI Flash
 |   H  |   x   |   x   | SDIO  | Boot from SD-card
 
+In the bootup message 'boot mode:(x,y)' three low bits of x are {MTDO, GPIO0, GPIO2}.
+
 Flow
 ----
 
