@@ -1,4 +1,8 @@
 #Building the toolchain
+
+Please consider using https://github.com/pfalcon/esp-open-sdk to build the complete toolchain. It does most of steps listed below (and some not listed, e.g. to bring you SDK with less binary blobs).
+If you cannot, or prefer doing each step yourself read on.
+
 ## Install needed dependencies (as root)
 ### 32-Bit Debian (Linux)
 ```
