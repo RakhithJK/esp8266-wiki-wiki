@@ -20,13 +20,13 @@ Memory Layout
 | 3FFFC000h |        |      4000h | RAM  |     | ETS system data RAM.
 | 40000000h | brom?  |     10000h | ROM  | RW? | Internal ROM. May be writable somehow, but details unknown.
 | 40010000h |        |            | No   |     | Zeroes. Assumed to be unmapped.
-| 40100000h | iram1  |      8000h | RAM  | RW  | Instruction RAM. Used by bootloader to load SPI Flash <40000h.
-| 40108000h |        |            | ?    |     | Zeroes.
+| 40100000h | iram1  |      8304h | RAM  | RW  | Instruction RAM. Used by bootloader to load SPI Flash <40000h. OTA bootloader uses 40108000h.
+| 40108304h |        |            | ?    |     | Zeroes, possibly more IRAM.
 | 40140000h |        |            | ?    |     | Repeated pattern of 59 31 d8 ec.
 | 40200000h |        |            | ?    |     | SPI Flash is mapped here. Mapping hardware has 32KBytes cache (Unconfirmed). Non-cached code runs 12...13 times slower than code from IRAM. Cached code runs as fast as from IRAM. This area is readable as data with aligned 4-byte reads. Mapping of FLASH to this region is controlled by bit 17 of SPI CTRL register (0x60000208): setting this bit maps the FLASH, clearing it unmaps it.
 | 40300000h |        |            | ?    |     | Unmapped, repeated pattern of 00 80 00 00.
-| 60000000h | ?      |      1000h | I/O  | RW? | Uncached I/O
-| 60001000h | ?      |       800h | ?    | RW? | Uncached I/O
+| 60000000h | ?      |      1000h | I/O  | RW? | Uncached I/O (see MMIO table below)
+| 60001000h | ?      |       800h | ?    | RW? | Uncached I/O (see MMIO table below)
 | 60001800h | ?      |       800h | ?    | RW? | Uncached. Mapped to 60001000h?
 | 60002000h |        |            | Exc  |     | Causes fault when reading.
 | 70000000h |        |  90000000h | No   |     | Unmapped, repeated pattern of 00 80 00 00.
@@ -83,6 +83,9 @@ Most of them live in 60000000h.
 |    60000700h |  A4h | rtc   | *Unconfirmed:* The RTC config registers, see `include/eagle_soc.h`
 |    60000800h |  44h | iomux | The IO MUX config registers, see `include/eagle_soc.h`
 |    60000F00h |  80h | uart1 | The UART1 config registers, see `examples/IoT_Demo/include/drivers/uart_register.h`
+|    60001000h | 100h | rtcb  | RTC backup memory, see `rtc_mem_backup`
+|    60001100h | 100h | rtcs  | RTC system memory, see `system_rtc_mem_write`
+|    60001200h | 200h | rtcu  | RTC user memory
 
 ### dport0 (3FF00000h&ndash;)
 
