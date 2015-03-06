@@ -20,8 +20,8 @@ Memory Layout
 | 3FFFC000h |        |      4000h | RAM  |     | ETS system data RAM.
 | 40000000h | brom?  |     10000h | ROM  | RW? | Internal ROM. May be writable somehow, but details unknown.
 | 40010000h |        |            | No   |     | Zeroes. Assumed to be unmapped.
-| 40100000h | iram1  |      8304h | RAM  | RW  | Instruction RAM. Used by bootloader to load SPI Flash <40000h. OTA bootloader uses 40108000h.
-| 40108304h |        |            | ?    |     | Zeroes, possibly more IRAM.
+| 40100000h | iram1  |     10000h | RAM  | RW  | Instruction RAM. Used by bootloader to load SPI Flash <40000h. OTA bootloader uses 40108000h.
+| 40110000h |        |            | ?    |     | Zeroes, possibly more IRAM.
 | 40140000h |        |            | ?    |     | Repeated pattern of 59 31 d8 ec.
 | 40200000h |        |            | ?    |     | SPI Flash is mapped here. Mapping hardware has 32KBytes cache (Unconfirmed). Non-cached code runs 12...13 times slower than code from IRAM. Cached code runs as fast as from IRAM. This area is readable as data with aligned 4-byte reads. Mapping of FLASH to this region is controlled by bit 17 of SPI CTRL register (0x60000208): setting this bit maps the FLASH, clearing it unmaps it.
 | 40300000h |        |            | ?    |     | Unmapped, repeated pattern of 00 80 00 00.
