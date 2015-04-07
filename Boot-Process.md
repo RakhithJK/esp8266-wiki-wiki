@@ -8,6 +8,7 @@ Overview
 ESP Boot Modes
 --------------
 The Espressif code can boot in different modes, selected on power-up based on GPIO pin levels.
+(MTDO is equivalent to GPIO15).
 
 | MTDO | GPIO0 | GPIO2 | Mode  | Description
 |:----:|:-----:|:-----:| ----- | -----------
