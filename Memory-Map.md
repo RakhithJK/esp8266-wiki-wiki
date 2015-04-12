@@ -82,6 +82,7 @@ Most of them live in 60000000h.
 |    60000600h |  28h | timer | *Unconfirmed:* The timer config registers, see `include/eagle_soc.h`
 |    60000700h |  A4h | rtc   | *Unconfirmed:* The RTC config registers, see `include/eagle_soc.h`
 |    60000800h |  44h | iomux | The IO MUX config registers, see `include/eagle_soc.h`
+|    60000d00h | >=8  | i2c   | *Unconfirmed:* Internal I2C controller registers, see ROM functions rom_i2c_readReg, rom_i2c_writeReg
 |    60000F00h |  80h | uart1 | The UART1 config registers, see `examples/IoT_Demo/include/drivers/uart_register.h`
 |    60001000h | 100h | rtcb  | RTC backup memory, see `rtc_mem_backup`
 |    60001100h | 100h | rtcs  | RTC system memory, see `system_rtc_mem_write`
