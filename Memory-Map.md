@@ -95,8 +95,8 @@ Most of them live in 60000000h.
 |  Address  | Bits | Description
 |-----------|-----:|-------------
 | 3FF00014h |    0 | When clear CPU runs at 80MHz. When set CPU runs at 160 MHz. Note that you need to call `os_update_cpu_frequency(int freq_in_mhz)` when changing the bit. Probably to calibrate timers. The UART divisor is not updated automatically, so you also have to call `uart_div_modify(uart_no, clock_freq_in_hz / baud_rate_in_baud)`.
-| 3FF00024h |    3 | When clear IRAM is mapped at 40108000h..4010BFFFh. When set that RAM is used by the FLASH caching mechanism.
-|           |    4 | When clear IRAM is mapped at 4010C000h..4010FFFFh. When set that RAM is used by the FLASH caching mechanism.
+| 3FF00024h |    3 | When clear IRAM is mapped at 40108000h..4010BFFFh. When set that region reads as 0.
+|           |    4 | When clear IRAM is mapped at 4010C000h..4010FFFFh. When set that region reads as 0.
 
 ### iomux Pin Registers (60000804h&ndash;60000843h)
 
